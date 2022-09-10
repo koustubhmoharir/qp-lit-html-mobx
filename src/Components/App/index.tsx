@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Page as LitPage } from "../../lib/Pages";
+import { TodoListPage as LitTodoListPage } from "../../lib/Pages";
 import { reactComponent } from "../LitReact";
 
-const Page = reactComponent(LitPage);
+const TodoListPage = reactComponent(LitTodoListPage);
 
 function App() {
   const [name, setName] = useState("Koustubh");
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <input value={name} onChange={(e) => setName(e.target.value)} />
-      <Page name={name} />
+      <TodoListPage />
     </>
   );
 }
